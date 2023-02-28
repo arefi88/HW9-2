@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <EditText
+            android:id="@+id/edt_fullname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="45dp"
+            android:ems="10"
+            android:hint="fullName"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="UserName"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/edt_fullname"
+            app:layout_constraintStart_toStartOf="@+id/edt_fullname"
+            app:layout_constraintTop_toBottomOf="@+id/edt_fullname" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/edt_username"
+            app:layout_constraintStart_toStartOf="@+id/edt_username"
+            app:layout_constraintTop_toBottomOf="@+id/edt_username"
+            android:autofillHints="emailAddress" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/edt_email"
+            app:layout_constraintStart_toStartOf="@+id/edt_email"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+        <EditText
+            android:id="@+id/edt_repassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Re-type Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/edt_password"
+            app:layout_constraintStart_toStartOf="@+id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/edt_repassword"
+            app:layout_constraintTop_toBottomOf="@+id/edt_repassword" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="485dp" />
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="488dp" />
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Register"
+            app:backgroundTint="#ED1515"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_register"
+            app:layout_constraintEnd_toEndOf="@+id/edt_repassword"
+            app:layout_constraintStart_toStartOf="@+id/radio_group"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+        <Button
+            android:id="@+id/btn_show_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_register"
+            android:layout_marginTop="12dp"
+            android:text="Show Info"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/btn_register"
+            app:layout_constraintStart_toStartOf="@+id/btn_register"
+            app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
